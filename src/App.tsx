@@ -3,6 +3,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { listen } from "@tauri-apps/api/event";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -15,11 +16,18 @@ function App() {
   const [rawPlist, setRawPlist] = useState(() => {
     return localStorage.getItem("rawPlist") || "";
   });
+  const [addr, setAddr] = useState(() => {
+    return localStorage.getItem("pairingAddr") || "10.7.0.1:49152";
+  });
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     localStorage.setItem("rawPlist", rawPlist);
   }, [rawPlist]);
+
+  useEffect(() => {
+    localStorage.setItem("pairingAddr", addr);
+  }, [addr]);
 
   useEffect(() => {
     let unlisten: (() => void) | undefined;
@@ -51,7 +59,7 @@ function App() {
         plistBytes = new TextEncoder().encode(rawPlist);
       }
       
-      await invoke("start_pairing", { plistBytes: Array.from(plistBytes || []) });
+      await invoke("start_pairing", { addr, plistBytes: Array.from(plistBytes || []) });
       setStatus("Pairing successful");
     } catch (err) {
       console.error("Pairing error:", err);
@@ -74,19 +82,31 @@ function App() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-grow overflow-hidden">
         <Card className="flex flex-col overflow-hidden">
           <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-medium">Pairing Plist</CardTitle>
+            <CardTitle className="text-sm font-medium">Configuration</CardTitle>
           </CardHeader>
           <CardContent className="flex-grow flex flex-col gap-4 overflow-hidden">
-            <div className="flex-grow relative">
-              <Label htmlFor="plist-input" className="sr-only">Raw Plist Content</Label>
+            <div className="space-y-2">
+              <Label htmlFor="addr-input" className="text-xs">Device IP Address</Label>
+              <Input
+                id="addr-input"
+                placeholder="10.7.0.1:49152"
+                value={addr}
+                onChange={(e) => setAddr(e.target.value)}
+                className="font-mono text-xs"
+              />
+            </div>
+            
+            <div className="flex-grow flex flex-col gap-2 min-h-0">
+              <Label htmlFor="plist-input" className="text-xs">Pairing Plist Content</Label>
               <Textarea
                 id="plist-input"
                 placeholder="Paste your .plist content here..."
-                className="h-full resize-none font-mono text-xs bg-muted/30"
+                className="flex-grow resize-none font-mono text-xs"
                 value={rawPlist}
                 onChange={(e) => setRawPlist(e.target.value)}
               />
             </div>
+            
             <div className="flex gap-2">
               <Button 
                 onClick={startPairing} 
@@ -101,14 +121,6 @@ function App() {
                     Start Pairing
                   </>
                 )}
-              </Button>
-              <Button 
-                variant="outline" 
-                size="icon"
-                onClick={() => setRawPlist("")}
-                disabled={!rawPlist}
-              >
-                <Trash2 className="w-4 h-4" />
               </Button>
             </div>
           </CardContent>
@@ -153,3 +165,4 @@ function App() {
 }
 
 export default App;
+
