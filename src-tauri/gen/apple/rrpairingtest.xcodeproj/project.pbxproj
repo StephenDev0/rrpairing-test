@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		0E76B0A69F53E791DBF03FCC /* libapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2E3E917854F84C70F8C60F /* libapp.a */; };
 		237229DAF6216F4B541E4BCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050A1D5C77124A44CA7F3CFF /* CoreGraphics.framework */; };
 		2C1C652E94C84CC5A1BCA2FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C27CB9E87FD8F374DB7BC5 /* UIKit.framework */; };
+		366F1A74F12CC83D9BFE6278 /* libapp.a in Resources */ = {isa = PBXBuildFile; fileRef = AB6B43F48413DA6440DBA39E /* libapp.a */; };
 		844099A47C3EC2F0CCF9360E /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385E7A7DEF78C296C7D8DBE8 /* Metal.framework */; };
 		8BF75CE94B0B20E5E80B0452 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 314017B9ADAC63E7D1116F86 /* main.mm */; };
 		A1151FFC9AF9B3BD8BC08303 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED010538A90BAD0E8C66E2F1 /* Security.framework */; };
@@ -23,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		050A1D5C77124A44CA7F3CFF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0C85042231BBBD0E78393384 /* lib.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = lib.rs; sourceTree = "<group>"; };
+		0C85042231BBBD0E78393384 /* lib.rs */ = {isa = PBXFileReference; path = lib.rs; sourceTree = "<group>"; };
 		0E43579A513BACFBB7F9599C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		143CFCA8D4B7639E330BF2FE /* rrpairingtest_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rrpairingtest_iOS.entitlements; sourceTree = "<group>"; };
 		1BECCD1B0AB2A2C1060A4F76 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
@@ -31,12 +32,13 @@
 		314017B9ADAC63E7D1116F86 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		31E6760EA4EAFAB4A0FF5818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385E7A7DEF78C296C7D8DBE8 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		3F398FB2C4D2262349395677 /* main.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.rs; sourceTree = "<group>"; };
+		3F398FB2C4D2262349395677 /* main.rs */ = {isa = PBXFileReference; path = main.rs; sourceTree = "<group>"; };
+		AB6B43F48413DA6440DBA39E /* libapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libapp.a; sourceTree = "<group>"; };
 		B3BEB9537C1368902032E9B8 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		B611012D9E65722F48951B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C3A2BB8BA1C32D1785F77639 /* bindings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindings.h; sourceTree = "<group>"; };
 		C7B378B6A494C51CD2639B51 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D3A1352B1E6D56F068BF8028 /* rrpairingtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rrpairingtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A1352B1E6D56F068BF8028 /* rrpairingtest_iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = rrpairingtest_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7F4D1755D15DE56BB069DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		ED010538A90BAD0E8C66E2F1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EF2E3E917854F84C70F8C60F /* libapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libapp.a; sourceTree = "<group>"; };
@@ -127,6 +129,22 @@
 			path = rrpairingtest_iOS;
 			sourceTree = "<group>";
 		};
+		997573B394F034B57594E2A9 /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				B76782C52FF6F37786A56C67 /* release */,
+			);
+			path = arm64;
+			sourceTree = "<group>";
+		};
+		B76782C52FF6F37786A56C67 /* release */ = {
+			isa = PBXGroup;
+			children = (
+				AB6B43F48413DA6440DBA39E /* libapp.a */,
+			);
+			path = release;
+			sourceTree = "<group>";
+		};
 		BECCFBBE26FFE6475DE86CEA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +156,7 @@
 		E274BB6C10DB4E2C953379EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3A1352B1E6D56F068BF8028 /* rrpairingtest.app */,
+				D3A1352B1E6D56F068BF8028 /* rrpairingtest_iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,8 +164,16 @@
 		F5031B52E48557FCF22BC953 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				997573B394F034B57594E2A9 /* arm64 */,
 			);
 			path = Externals;
+			sourceTree = "<group>";
+		};
+		"TEMP_CF627C36-CFB8-41D3-B0FC-23B2B12AB63A" /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = x86_64;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +196,7 @@
 			packageProductDependencies = (
 			);
 			productName = rrpairingtest_iOS;
-			productReference = D3A1352B1E6D56F068BF8028 /* rrpairingtest.app */;
+			productReference = D3A1352B1E6D56F068BF8028 /* rrpairingtest_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,6 +207,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					955620C7349FAC12D4511F7B = {
+						DevelopmentTeam = 2743MYJ5UC;
+					};
+				};
 			};
 			buildConfigurationList = 81E752F9D8110B7EAE85D3CC /* Build configuration list for PBXProject "rrpairingtest" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -192,6 +223,7 @@
 			);
 			mainGroup = 3FB6D4A88F2D40365AA66B9A;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -208,6 +240,7 @@
 				086E5B75B128D55F9F2D6649 /* Assets.xcassets in Resources */,
 				F1905BC3F0C706853732AAB8 /* LaunchScreen.storyboard in Resources */,
 				DB2EDC56AF6F12BD6C7D235F /* assets in Resources */,
+				366F1A74F12CC83D9BFE6278 /* libapp.a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SWIFT_RS_TARGET=aarch64-apple-ios bun tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}";
+			shellScript = "bun tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -253,11 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ARCHS = arm64;
+				ARCHS = (
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = rrpairingtest_iOS/rrpairingtest_iOS.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "2743MYJ5UC";
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
@@ -270,21 +304,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				"LIBRARY_SEARCH_PATHS[arch=arm64]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION)",
-					"$(SDKROOT)/usr/lib/swift",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION)",
-					"$(SDKROOT)/usr/lib/swift",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
-				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(DT_TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(DT_TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				OTHER_LDFLAGS = "$(inherited) -Wl,-force_load,$(DT_TOOLCHAIN_DIR)/usr/lib/swift/iphoneos/libswiftCompatibility56.a -Wl,-force_load,$(DT_TOOLCHAIN_DIR)/usr/lib/swift/iphoneos/libswiftCompatibilityConcurrency.a -framework SwiftUI";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stik.rrpairingtest;
 				PRODUCT_NAME = "rrpairingtest";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
@@ -339,13 +363,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "$(inherited) -Wl,-force_load,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/libswiftCompatibility56.a -Wl,-force_load,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/libswiftCompatibilityConcurrency.a -framework SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_OBJC_BRIDGING_HEADER = Sources/rrpairingtest/bindings/bindings.h;
-				SWIFT_VERSION = 5.9;
+				SWIFT_VERSION = 5.0;
 			};
 			name = release;
 		};
@@ -353,11 +375,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ARCHS = arm64;
+				ARCHS = (
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = rrpairingtest_iOS/rrpairingtest_iOS.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = "2743MYJ5UC";
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
@@ -370,21 +393,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				"LIBRARY_SEARCH_PATHS[arch=arm64]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION)",
-					"$(SDKROOT)/usr/lib/swift",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
-				);
-				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION)",
-					"$(SDKROOT)/usr/lib/swift",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
-				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(DT_TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(DT_TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				OTHER_LDFLAGS = "$(inherited) -Wl,-force_load,$(DT_TOOLCHAIN_DIR)/usr/lib/swift/iphoneos/libswiftCompatibility56.a -Wl,-force_load,$(DT_TOOLCHAIN_DIR)/usr/lib/swift/iphoneos/libswiftCompatibilityConcurrency.a -framework SwiftUI";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stik.rrpairingtest;
 				PRODUCT_NAME = "rrpairingtest";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = arm64;
@@ -445,14 +458,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "$(inherited) -Wl,-force_load,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/libswiftCompatibility56.a -Wl,-force_load,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/libswiftCompatibilityConcurrency.a -framework SwiftUI";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_OBJC_BRIDGING_HEADER = Sources/rrpairingtest/bindings/bindings.h;
-				SWIFT_VERSION = 5.9;
+				SWIFT_VERSION = 5.0;
 			};
 			name = debug;
 		};

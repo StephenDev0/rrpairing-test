@@ -12,6 +12,7 @@ settingGroups:
     base:
       PRODUCT_NAME: rrpairingtest
       PRODUCT_BUNDLE_IDENTIFIER: com.stik.rrpairingtest
+      DEVELOPMENT_TEAM: 2743MYJ5UC
 targetTemplates:
   app:
     type: application
@@ -21,7 +22,6 @@ targetTemplates:
       environmentVariables:
         RUST_BACKTRACE: full
         RUST_LOG: info
-        IPHONEOS_DEPLOYMENT_TARGET: 16.0
     settings:
       groups: [app]
 targets:
@@ -60,20 +60,16 @@ targets:
       environmentVariables:
         RUST_BACKTRACE: full
         RUST_LOG: info
-        IPHONEOS_DEPLOYMENT_TARGET: 16.0
     settings:
       base:
         ENABLE_BITCODE: false
         ARCHS: [arm64]
         VALID_ARCHS: arm64 
-        LIBRARY_SEARCH_PATHS[arch=x86_64]: $(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
-        LIBRARY_SEARCH_PATHS[arch=arm64]: $(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
+        LIBRARY_SEARCH_PATHS[arch=x86_64]: $(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(DT_TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)
+        LIBRARY_SEARCH_PATHS[arch=arm64]: $(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(DT_TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(DT_TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)
         ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: true
         EXCLUDED_ARCHS[sdk=iphoneos*]: x86_64
-        SWIFT_VERSION: 5.9
-        OTHER_LDFLAGS: $(inherited) -Wl,-force_load,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/libswiftCompatibility56.a -Wl,-force_load,/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/libswiftCompatibilityConcurrency.a -framework SwiftUI
-        CLANG_ENABLE_MODULES: true
-        SWIFT_OBJC_BRIDGING_HEADER: Sources/rrpairingtest/bindings/bindings.h
+        OTHER_LDFLAGS: $(inherited) -Wl,-force_load,$(DT_TOOLCHAIN_DIR)/usr/lib/swift/iphoneos/libswiftCompatibility56.a -Wl,-force_load,$(DT_TOOLCHAIN_DIR)/usr/lib/swift/iphoneos/libswiftCompatibilityConcurrency.a -framework SwiftUI
       groups: [app]
     dependencies:
       - framework: libapp.a
@@ -86,7 +82,7 @@ targets:
       - sdk: UIKit.framework
       - sdk: WebKit.framework
     preBuildScripts:
-      - script: SWIFT_RS_TARGET=aarch64-apple-ios bun tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths "${FRAMEWORK_SEARCH_PATHS:?}" --header-search-paths "${HEADER_SEARCH_PATHS:?}" --gcc-preprocessor-definitions "${GCC_PREPROCESSOR_DEFINITIONS:-}" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}
+      - script: bun tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths "${FRAMEWORK_SEARCH_PATHS:?}" --header-search-paths "${HEADER_SEARCH_PATHS:?}" --gcc-preprocessor-definitions "${GCC_PREPROCESSOR_DEFINITIONS:-}" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}
         name: Build Rust Code
         basedOnDependencyAnalysis: false
         outputFiles:
